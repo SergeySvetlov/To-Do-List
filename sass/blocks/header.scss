@@ -1,0 +1,50 @@
+.header {
+  padding: 25px 0;
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    margin: 0 25px 0 0;
+  }
+
+  &__title {
+    margin: 0;
+    color: $color-shamrock;
+  }
+
+  h1 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: normal;
+    font-family: $ff-alumni-sans;
+    color: $color-shamrock;
+  }
+
+  p {
+    margin: 0;
+    color: $color-buttercup;
+    word-wrap: break-word;
+  }
+
+  @include vp-767 {
+    padding: 15px 0;
+
+    &__logo {
+      margin: 0 15px 0 0;
+      width: 80px;
+      height: 80px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}

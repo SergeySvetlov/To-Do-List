@@ -1,0 +1,153 @@
+.to-do {
+  padding: 25px 0;
+
+  @include vp-767 {
+    padding: 15px 0;
+  }
+}
+
+.to-do__list-wrapper {
+  max-width: 800px;
+  min-height: 200px;
+  padding: 25px;
+  margin: 0 auto 25px auto;
+  border: 5px solid $color-shamrock;
+  border-radius: 25px;
+  background-color: $color-default-white;
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.75);
+}
+
+.to-do__list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.to-do__task {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: 0;
+  border-bottom: 1px solid $color-shamrock;
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &--complete {
+    p {
+      text-decoration: line-through;
+    }
+
+    .to-do__complete {
+      display: none;
+    }
+  }
+}
+
+.to-do__task p {
+  word-wrap: break-word;
+  margin: 0 15px 0 0;
+
+  @include vp-767 {
+    font-size: 16px;
+  }
+}
+
+.to-do__task button {
+  border-radius: 15px;
+  border: 1px solid $color-shamrock;
+  background-color: $color-light-cyan;
+  box-shadow: inset rgba(0, 0, 0, 0.3) 0 -5px 10px;
+  width: 70px;
+  aspect-ratio: 1;
+
+  &.to-do__complete {
+    margin: 0 15px 0 auto;
+  }
+
+  @include hover-focus {
+    box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 10px;
+    color: $color-shamrock;
+    opacity: 0.5;
+  }
+
+  @include vp-767 {
+    width: 35px;
+    border-radius: 10px;
+    padding: 5px 5px 0 5px;
+
+    &.to-do__complete {
+      margin: 0 7px 0 auto;
+    }
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
+.to-do form {
+  max-width: 800px;
+  padding: 25px;
+  margin: 0 auto 25px auto;
+  border: 5px solid $color-shamrock;
+  border-radius: 25px;
+  background-color: $color-default-white;
+  box-shadow: 10px 10px 30px 0 rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-wrap: wrap;
+
+  label {
+    width: 100%;
+    margin: 0 0 25px 0;
+
+    @include vp-767 {
+      font-size: 16px;
+      margin: 0 0 16px;
+    }
+  }
+
+  input {
+    width: 100%;
+    margin: 0 0 25px 0;
+    padding: 10px 25px;
+    border: 1px solid $color-shamrock;
+    border-radius: 10px;
+
+    @include vp-767 {
+      border-radius: 7px;
+      padding: 7px 15px;
+      margin: 0 0 16px;
+      font-size: 16px;
+    }
+  }
+
+  button {
+    border-radius: 15px;
+    border: 1px solid $color-shamrock;
+    background-color: $color-light-cyan;
+    box-shadow: inset rgba(0, 0, 0, 0.3) 0 -5px 10px;
+    color: $color-buttercup;
+    text-align: center;
+    width: 150px;
+    padding: 20px;
+    margin: 0 0 0 auto;
+    word-wrap: break-word;
+    transition: $trans-default;
+
+    @include hover-focus {
+      box-shadow: inset rgba(0, 0, 0, 0.3) 0 0 10px;
+      color: $color-shamrock;
+      opacity: 0.5;
+    }
+
+    @include vp-767 {
+      border-radius: 10px;
+      width: 100px;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+}

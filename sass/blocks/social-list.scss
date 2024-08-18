@@ -1,0 +1,40 @@
+.social-list {
+  align-content: center;
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  min-width: 108px;
+  max-width: 165px;
+
+  @include vp-767 {
+    min-width: 40px;
+    max-width: 120px;
+    padding: 5px;
+  }
+}
+
+.social-list__link {
+  display: block;
+  max-height: 54px;
+  max-width: 54px;
+  padding: 7px;
+  transition: $trans-default;
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+
+  @include vp-767 {
+    max-height: 40px;
+    max-width: 40px;
+    padding: 5px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
