@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Тестовое задание. Светлов">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicons/favicon.ico">
+    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AlumniSans-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/Roboto-Condensed.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <picture>
+            <source type="image/webp" srcset="img/decor/logo.webp, img/decor/logo@2x.webp 2x">
+            <img class="header__logo" src="img/decor/logo.png" width="100" height="100" srcset="img/decor/logo@2x.png 2x" alt="Логотип" />
+          </picture>
+          <div class="header__title">
+            <h1>To-Do List</h1>
+            <p>Список моих дел</p>
+          </div>
+        </div>
+      </header>
+      <main>
+        <section class="to-do">
+          <div class="container">
+            <div class="to-do__list-wrapper">
+              <section class="to-do__empty" data-empty style="display: none;">
+                <p>Нет дел на сегодня</p>
+              </section>
+              <ul class="to-do__list" data-task-list>
+
+              </ul>
+            </div>
+
+            <form data-form>
+              <label for="input">Добывить новую задачу:</label>
+              <input id="input" type="text" placeholder="Новая задача" data-input>
+              <button type="submit" data-submit-btn>Добавить</button>
+            </form>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container">
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://t.me/+79535013115">
+                <span class="visually-hidden">Телеграм</span>
+                <svg fill="#3ABCA7" width="40" height="40" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite/sprite.svg#tg"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-list__item">
+              <a class="social-list__link" href="https://github.com/SergeySvetlov?tab=repositories">
+                <span class="visually-hidden">Гитхаб</span>
+                <svg fill="#3ABCA7" width="40" height="40" viewBox="0 0 40 40"xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="img/sprite/sprite.svg#gh"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <template id="task">
+      <li class="to-do__task" data-task>
+        <p>Учить JS</p>
+        <button class="to-do__complete" type="button" data-complete-btn>
+          <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite/sprite.svg#complete"></use>
+          </svg>
+          <span class="visually-hidden">Отметить задачу как выполненную</span>
+        </button>
+        <button class="to-do__delete" type="button" data-delete-btn>
+          <svg width="40" height="40" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="img/sprite/sprite.svg#delete"></use>
+          </svg>
+          <span class="visually-hidden">Удалить задачу</span>
+        </button>
+      </li>
+    </template>
+
+    <script src="js/vendor.min.js"></script>
+    <script src="js/main.min.js"></script>
+  </body>
+</html>
